@@ -2,9 +2,33 @@
 
 This repository contains the backend implementation of the Visitor Entry Pass project. The project is designed to manage visitor entries for different locations, providing functionalities such as registration, visitor lookup, search, and visit record management. It is built using the Spring framework, MongoDB for data storage, GraphQL for efficient data fetching, and REST API for programmatic interactions.
 
-## Frontend Repo
+## Frontend Repo React.
 
 [React JS Code](https://github.com/Suryansh-Sharma/Visitor-Entry-Pass-Frontend-React)
+
+## Some Demo Images
+
+1. Login Page.
+![Login](https://github.com/Suryansh-Sharma/Visitor-Entry-Pass-Backend-Spring/assets/80879578/9bb1a34d-94ed-405c-8256-349ae5e17374)
+
+2. Home page with today all visit.
+![Home](https://github.com/Suryansh-Sharma/Visitor-Entry-Pass-Backend-Spring/assets/80879578/a026208b-f4d4-4ffa-8a15-1e11c211b138)
+
+3. Add New Visit (a).
+![Add_Visit_1](https://github.com/Suryansh-Sharma/Visitor-Entry-Pass-Backend-Spring/assets/80879578/4378aa58-f400-48fc-be8c-8e7419fd0538)
+
+4. Add New Visit (b).
+![Add_Visit_2](https://github.com/Suryansh-Sharma/Visitor-Entry-Pass-Backend-Spring/assets/80879578/8e5dd4b1-cfed-4ce4-b223-83cacb514c11)
+
+5. Search Visitor On Various Field.
+![Search](https://github.com/Suryansh-Sharma/Visitor-Entry-Pass-Backend-Spring/assets/80879578/b845a202-ba54-4d65-9a61-a1fde79c9aa1)
+
+6. Visitor Info (a).
+![Visitor_Info_1](https://github.com/Suryansh-Sharma/Visitor-Entry-Pass-Backend-Spring/assets/80879578/05f6f92a-4fb2-4100-ab5e-0e90c057b41d)
+
+7. Visitor Info (b).
+![Visitor_Info_2](https://github.com/Suryansh-Sharma/Visitor-Entry-Pass-Backend-Spring/assets/80879578/911a1a3f-86c9-42bc-82cc-bc5a3f042f6f)
+
 
 ## Features
 
