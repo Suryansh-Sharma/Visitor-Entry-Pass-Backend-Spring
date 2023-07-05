@@ -1,0 +1,98 @@
+type Query {
+    getVisit(id: ID!): String
+    getVisitorByContact(visitorContact: String!):VisitModel
+    getVisitorOnSpecificDate(date:String,pageSize:Int,pageNumber:Int):PagingVisitDto
+    getTodayAllVisit(pageSize:Int,pageNumber:Int):PagingVisitDto
+    searchVisitor(searchData:String,date:String,field:String,pageSize:Int,pageNumber:Int):PagingVisitDto
+}
+type Mutation {
+    addNewVisit(input: VisitInput!):VisitModel
+    registerNewUser(input: UserInput!):UserDto
+    loginUser(input: UserLoginInput!):UserDto
+}
+
+# Input Model
+input UserInput{
+    username:String!
+    contact:String!
+    password:String!
+    schoolRole:String!
+}
+input UserLoginInput{
+    contact:String!
+    password:String!
+}
+input VisitInput {
+    visitorContact: String!
+    visitorName: String!
+    visitorImage: String
+    reason: String!
+    location: String!
+    visitorAddress: VisitorAddressInput
+    hasChildrenInSchool: Boolean
+    visitorChildren: [VisitorChildInput]
+}
+
+input VisitorAddressInput {
+    city: String
+    pinCode: String
+    line1: String
+}
+
+input VisitorChildInput {
+    childName: String
+    childClass: String
+    __typename:String
+}
+
+
+# Output Dto.
+type UserDto{
+    username:String
+    contact:String
+    password:String
+    schoolRole:String
+    isValid:Boolean
+}
+type PagingVisitDto{
+    pageNo:Int
+    totalPages:Int
+    visits:[VisitModel]
+    pageSize:Int
+    totalData:Float
+}
+type VisitModel {
+    visitorContact: String!
+    visitorName: String!
+    visitorImage: String
+    visitorAddress: VisitorAddressModel
+    hasChildrenInSchool: Boolean
+    reason: String
+    location: String
+    latestVisitDate:String
+    latestVisitTime:String
+    visitorChildren: [VisitorChild]
+    visitingRecord: [VisitingRecord]
+}
+
+type VisitorAddressModel {
+    city: String
+    pinCode: String
+    line1: String
+}
+
+type VisitorChild {
+    childName: String
+    childClass: String
+}
+type VisitingRecord {
+    date: String
+    time: String
+    reason: String
+    location: String
+    status: String
+    calledOn: String
+    visitCompletedOn: String
+}
+
+
